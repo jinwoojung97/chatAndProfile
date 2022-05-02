@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SystemMessageCell" id="AB8-aY-iNB" customClass="SystemMessageCell" customModule="ZeplinProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="41.5"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZRc-Gu-YJ5">
+                <rect key="frame" x="0.0" y="0.0" width="378" height="41.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDP-7u-rtL" userLabel="bgview">
+                        <rect key="frame" x="0.0" y="0.0" width="378" height="41.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5h-eb-bY0">
+                                <rect key="frame" x="20" y="7" width="243" height="27.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nickname 님이 방송에 입장하였습니다." lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sB4-9U-MUH">
+                                        <rect key="frame" x="10" y="4" width="223" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="1" green="0.88235294117647056" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="sB4-9U-MUH" firstAttribute="leading" secondItem="g5h-eb-bY0" secondAttribute="leading" constant="10" id="AKQ-Yv-piX"/>
+                                    <constraint firstAttribute="bottom" secondItem="sB4-9U-MUH" secondAttribute="bottom" constant="4" id="NEn-Fz-MJH"/>
+                                    <constraint firstAttribute="trailing" secondItem="sB4-9U-MUH" secondAttribute="trailing" constant="10" id="WeW-6R-QzL"/>
+                                    <constraint firstItem="sB4-9U-MUH" firstAttribute="top" secondItem="g5h-eb-bY0" secondAttribute="top" constant="4" id="tZO-du-eZX"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="g5h-eb-bY0" firstAttribute="leading" secondItem="RDP-7u-rtL" secondAttribute="leading" constant="20" id="ce4-dK-UG8"/>
+                            <constraint firstItem="g5h-eb-bY0" firstAttribute="top" secondItem="RDP-7u-rtL" secondAttribute="top" constant="7" id="nO1-dj-x9G"/>
+                            <constraint firstAttribute="bottom" secondItem="g5h-eb-bY0" secondAttribute="bottom" constant="7" id="oWv-Eq-A0m"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="g5h-eb-bY0" secondAttribute="trailing" constant="24" id="pgs-Q4-hXF"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="RDP-7u-rtL" secondAttribute="bottom" id="AYx-7h-vab"/>
+                    <constraint firstItem="RDP-7u-rtL" firstAttribute="top" secondItem="ZRc-Gu-YJ5" secondAttribute="top" id="S1y-ax-Qjf"/>
+                    <constraint firstAttribute="trailing" secondItem="RDP-7u-rtL" secondAttribute="trailing" id="q8Q-fQ-CTI"/>
+                    <constraint firstItem="RDP-7u-rtL" firstAttribute="leading" secondItem="ZRc-Gu-YJ5" secondAttribute="leading" id="s3u-8t-1Ca"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="378" height="43"/>
+            <connections>
+                <outlet property="bgView" destination="RDP-7u-rtL" id="Xd3-qT-uZB"/>
+                <outlet property="messageBGView" destination="g5h-eb-bY0" id="GU9-PC-Wey"/>
+                <outlet property="messageLabel" destination="sB4-9U-MUH" id="bhL-yD-k1r"/>
+            </connections>
+            <point key="canvasLocation" x="178.2608695652174" y="-17.745535714285712"/>
+        </collectionViewCell>
+    </objects>
+</document>
